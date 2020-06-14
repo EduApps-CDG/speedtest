@@ -1,7 +1,8 @@
 var w=null;
-            var ggdl,ggul,ggping;
-            function runTest(){
-                w=new Worker("speedtest_worker.min.js");
+var ggdl,ggdlr,ggul,ggping;
+function runTest(){
+                check_ip();
+                w=new Worker("speedtest_worker.js");
                 var interval=setInterval(function(){w.postMessage("status");}.bind(this),100);
                 document.getElementById("abortBtn").style.display="";
                 document.getElementById("startBtn").style.display="none";
@@ -14,9 +15,10 @@ var w=null;
                         document.getElementById("startBtn").style.display="";
                         w=null;
                     }
-                    updateGauge(ggdl,   data[1]);
-                    updateGauge(ggul,   data[2]);
-                    updateGauge(ggping, data[3]);
+                    updateGauge(ggdlr,   data[1]);
+                    updateGauge(ggdl,   data[2]);
+                   // updateGauge(ggul,   data[2]);
+                   // updateGauge(ggping, data[3]);
 					document.getElementById("ip").innerHTML="Your IP : " +data[4];
 					document.getElementById("isp").innerHTML="Your ISP : " +data[6];
 					updateGauge(ggjitter, data[5]);
@@ -30,8 +32,7 @@ var w=null;
             document.addEventListener("DOMContentLoaded", function(event) {
                 ggdl = new JustGage({
                     id: 'ggdl',
-                    title: "Download",
-                    label: "Mbit/s",
+                    label: "Megabits",
                     titleFontFamily : "Open Sans",
                     valueFontFamily : "Open Sans",                    
                     refreshAnimationTime: 300,                    
@@ -43,7 +44,25 @@ var w=null;
                     humanFriendly : false,  
                     levelColors: [
                         "#999999",
-                        "#339933"
+                        "#CC0000"
+                    ]
+                });
+                
+                ggdlr = new JustGage({
+                    id: 'ggdlr',
+                    label: "Megabytes",
+                    titleFontFamily : "Open Sans",
+                    valueFontFamily : "Open Sans",                    
+                    refreshAnimationTime: 300,                    
+                    value: 0,
+                    min: 0,
+                    max: 10,
+                    decimals : 2,
+                    formatNumber: true,                    
+                    humanFriendly : false,  
+                    levelColors: [
+                        "#999999",
+                        "#CC0000"
                     ]
                 });
 
@@ -62,7 +81,7 @@ var w=null;
                     humanFriendly : false,  
                     levelColors: [
                         "#999999",
-                        "#333399"
+                        "#CC0000"
                     ]
 
                 });
@@ -82,7 +101,7 @@ var w=null;
                     humanFriendly : false,  
                     levelColors: [
                         "#999999",
-                        "#993333"
+                        "#CC0000"
                     ]
                 });
 				ggjitter = new JustGage({
@@ -100,7 +119,7 @@ var w=null;
                     humanFriendly : false,  
                     levelColors: [
                         "#999999",
-                        "#993333"
+                        "#CC0000"
                     ]
                 });
             });
@@ -112,3 +131,6 @@ var w=null;
                 // Refresh the gauge
                 gauge.refresh(value, max);
             }
+
+function check_ip() {
+}
