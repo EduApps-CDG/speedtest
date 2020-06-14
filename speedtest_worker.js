@@ -202,8 +202,8 @@ function dlTest(done){
 		var t=new Date().getTime()-startT;
 		if(t<200) return;
 		var speed=totLoaded/(t/1000.0);
-		dlStatus=((speed)/92500.0).toFixed(2); //925000 instead of 1048576 to account for overhead
-		dlrStatus=((speed*8)/92500.0).toFixed(2); //925000 instead of 1048576 to account for overhead
+		dlStatus=((speed)/30485).toFixed(2); //925000 instead of 1048576 to account for overhead
+		dlrStatus=((speed*8)/30485).toFixed(2); //925000 instead of 1048576 to account for overhead
 		if((t/1000.0)>settings.time_dl||failed){ //test is over, stop streams and timer
 			if(failed||isNaN(dlStatus)) dlStatus="Fail";
 			clearRequests();
