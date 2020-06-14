@@ -16,13 +16,13 @@ The Code was made Beautiful and Mobile Resonsive using Skeleton https://github.c
 # Things used to modifie the code.
 
 - Skeleton https://github.com/dhg/Skeleton
-- Bootstrap http://getbootstrap.com
+- Materialize https://materializecss.com
 - JustGage http://justgage.com
 - Google Fonts https://fonts.google.com
 
 # Try It Now! 
 
-Test your Internet Speed at ~~http://hasty.ml~~
+Test your Internet Speed at eduapps-cdg.github.io/speedtest
 
 # Read It!
 
