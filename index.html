@@ -5,21 +5,35 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Speed Test</title>
-  <meta name="description" content="The Most Light Weight Speed Test For Internet Connection. Test Your Internet Speed!">
-  <meta name="author" content="Saurav Khare">
+  <title>EduApps Speed Tester</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="network, speed, bandwidth, test, eduapps, eduapps-cdg">
+  <meta name="description" content="EduApps Speed Tester is the best speed tester with most functions.">
+  <meta name="copyright" content="EduApps">
+  <meta name="language" content="EN">
+  <meta name="robots" content="index, follow">
+  <meta name="Classification" content="Games">
+  <meta name="author" content="Eduardo P. Gomez, eduardoprocopiogomez@gmail.com">
+  <meta name="designer" content="Eduardo P. Gomez">
+  <meta name="reply-to" content="eduardoprocopiogomez@gmail.com">
+  <meta name="owner" content="Eduardo P. Gomez">
+  <meta name="url" content="https://eduapps-cdg.github.io">
+  <meta name="pagename" content="EduApps Speed Tester">
+  <meta name="DC.title" content="EduApps Speed Tester">
+  <meta itemprop="name" content="EduApps Speed Tester">
+  <meta name="google-site-verification" content="RFYEW38CV8Qs81qaPib1_wn2ZUWPP72ns8HUFOg-lG0">
+  <meta name="og:title" content="EduApps Projects">
+  <meta name="twitter:title" content="EduApps Projects">
+  <meta name="og:description" content="EduApps Speed Tester is the best speed tester with most functions.">
+  <meta name="twitter:description" content="EduApps is a company that makes Games and Game Making Tools.">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@EduAppsCDG" />
+  <meta property="og:image" content="https://eduapps-cdg.github.io/google/icon.png">
+  <meta property="og:url" content="https://eduapps-cdg.github.io" >
+  <meta name="fb:app_id" content="564858804296125">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
 
@@ -28,46 +42,101 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.2/justgage.min.js"></script>
   <script src="js/thecore.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="/logo.png">
   
 </head>
-<body>
+<body style="background: #333333; color: #ABABAB">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   
-	<nav class="navbar navbar-light">
-            <a class="navbar-brand" href="#"><h1>Speed Test</h1></a>
+	<nav class="nav-extended" style="background: #000000">
+        <div class="nav-wrapper">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="#" class="brand-logo">
+        <img height="56px" src="/logo.png" alt="Home">
+      </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li clas="active"><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/speedtester">Speed Tester</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a class="right" href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="Translate" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="Free Website Translator" style="border:0;"/></a><script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js"></script></li>
+      </ul>
+        </div>
+            <!--a class="navbar-brand" href="#"><h1>EduApps Speed Tester</h1></a-->
     </nav>
+    
+    <div class="container">
+	<div>
+        <div id="warn" class="card darken-1" style="background: #FF8800">
+        <div class="card-content white-text">
+          <span class="card-title">Warning</span>
+          <p>It is recommended that you disconnect all devices and download them for better accuracy.</p>
+        </div>
+        <div class="card-action">
+          <button class="red" style="background: #CC0000" onclick="document.getElementById('warn').remove()">Entendi!</button>
+        </div>
+      </div>
 	<br>
 	<br>
+        <div>
+            <a href="javascript:runTest()"   id="startBtn" class="btn btn-primary btn-lg" style="background: #CC0000">Start Speed Test</a>
+            <a href="javascript:abortTest()" id="abortBtn" class="btn btn-primary btn-lg" style="display:none; background: #CC0000">Stop Speed Test</a>
+        </div>
 	<br>
 	<br>
-
-    <div class="container-fluid">
-	<div class="row">
-	<div id="testArea">
+	<div class="row" id="testArea">
 	
-            <div class="col-sm"><div class="meter" id="ggdl"></div></div>
-            <div class="col-sm"><div class="meter" id="ggul"></div></div>
-            <div class="col-sm"><div class="meter" id="ggping"></div></div>
+        <div class="col s6">
+            <h3>Results by provider</h3>
+            <div class="meter" id="ggdl"></div>
+        </div>
+        <div class="col s6">
+            <h3>True results</h3>
+            <div class="meter" id="ggdlr"></div>
+        </div>
+            <!--div class="col-sm"><div class="meter" id="ggul"></div></div>
+            <div class="col-sm"><div class="meter" id="ggping"></div></div-->
         </div>
 		</div>
-        <div>
-            <a href="javascript:runTest()"   id="startBtn" class="btn btn-primary btn-lg">Start</a>
-            <a href="javascript:abortTest()" id="abortBtn" class="btn btn-primary btn-lg" style="display:none;">Stop</a>
-        </div>
         <br>
-		<p>Fonts: <a href="https://fonts.google.com/">Google Gonts</a> | Gauges: <a href="http://justgage.com/">justgage.com</a></p>
+        <H3>You might be being scammed!</H3>
+        <p> Usually when you download a file you will be seeing its progress in Megabytes. Usually providers distribute their bandwidth in Megabits, but you do not know! The providers use the term "Megs" to make your ads, which is used both to set Megabytes as Megabits leading you to believe that you will have your internet Megabytes when naverdade you have eight times less speed and this is wrong!</p>
+        <p> We should receive our internet in Megabytes and not Megabits.</p>
+        <br>
+        <H3> Okay, but what is a Megabit?</H3>
+        <p> In computing, the processor uses a binary system (1 and 0), we give each of these numbers the name of bit. the number of bits is given by the number of digits. When we have an 8-bit number (8 digits), we call that number byte. When we have 1000 bytes, we call them Kilobytes, and finally, when we have 1000 Kilobytes, we change them to Megabytes and so on.</p>
+        <br>
+        <H3>How do I know the real speed of my internet?</H3>
+        <p> It's simple, take your contracted speed and divide by 8. For example, my internet is 5 "Megs", so just do:</p>
+        <H5>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" alttext="five-eighths equals 0.625">
+  <mstyle displaystyle="true">
+    <mfrac>
+      <mn>5</mn>
+      <mn>8</mn>
+    </mfrac>
+    <mo>=</mo>
+    <mn>0.625</mn>
+  </mstyle>
+</math>
+    </H5>
+		<p>Gauges: <a href="http://justgage.com/">justgage.com</a></p>
       
       
     </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript">
+  window.onload = function() {
+    M.AutoInit();
+  }
+  </script>
 </body>
 </html>
