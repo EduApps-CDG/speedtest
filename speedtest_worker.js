@@ -8,6 +8,7 @@
 //data reported to main thread
 var testStatus=0, //0=not started, 1=download test, 2=ping+jitter test, 3=upload test, 4=finished, 5=abort/error
 	dlStatus="", //download speed in megabit/s with 2 decimal digits
+    dlrStatus="",
 	ulStatus="", //upload speed in megabit/s with 2 decimal digits
 	pingStatus="", //ping in milliseconds with 2 decimal digits
 	jitterStatus="", //jitter in milliseconds with 2 decimal digits
@@ -53,7 +54,7 @@ var useFetchAPI=false;
 this.addEventListener('message', function(e){
 	var params=e.data.split(" ");
 	if(params[0]=="status"){ //return status
-		postMessage(testStatus+";"+dlStatus+";"+ulStatus+";"+pingStatus+";"+clientIp+";"+jitterStatus);
+		postMessage(testStatus+";"+dlStatus+";"+dlrStatus+";"+ulStatus+";"+pingStatus+";"+clientIp+";"+jitterStatus);
 	}
 	if(params[0]=="start"&&testStatus==0){ //start new test
 		testStatus=1;
@@ -201,7 +202,8 @@ function dlTest(done){
 		var t=new Date().getTime()-startT;
 		if(t<200) return;
 		var speed=totLoaded/(t/1000.0);
-		dlStatus=((speed*8)/925000.0).toFixed(2); //925000 instead of 1048576 to account for overhead
+		dlStatus=((speed)/92500.0).toFixed(2); //925000 instead of 1048576 to account for overhead
+		dlrStatus=((speed*8)/92500.0).toFixed(2); //925000 instead of 1048576 to account for overhead
 		if((t/1000.0)>settings.time_dl||failed){ //test is over, stop streams and timer
 			if(failed||isNaN(dlStatus)) dlStatus="Fail";
 			clearRequests();
@@ -210,6 +212,7 @@ function dlTest(done){
 		}
 	}.bind(this),200);
 }
+
 //upload test, calls done function whent it's over
 //garbage data for upload test (1mb of random bytes repeated 20 times, for a total of 20mb)
 var r=new ArrayBuffer(1048576);
