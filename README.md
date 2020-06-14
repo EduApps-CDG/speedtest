@@ -3,7 +3,7 @@ Simple Lightweight Internet Speed Test Using HTML &amp; JavaScript
 This SpeedTest if free of Flash, Java, Websocket. Just pure HTML & JavaScript.
 
 The code and project was done by https://github.com/adolfintel at https://github.com/adolfintel/speedtest. Mine is just an update and a try to make the Test Beautiful and Mobile Responsive.
-The Code was made Beautiful and Mobile Resonsive using Skeleton https://github.com/dhg/Skeleton, and Bootstrap http://getbootstrap.com.
+The Code was made Beautiful and Mobile Resonsive using [Skeleton](https://github.com/dhg/Skeleton), and [Materialize](https://materializecss.com).
 
 
 # Requirements
